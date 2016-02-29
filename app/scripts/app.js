@@ -10,7 +10,8 @@
  */
 angular
   .module('smartBalanceApp', ['ngAnimate', 'ngRoute'])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $locationProvider) {
+    $locationProvider.html5Mode(true);
     $routeProvider.when('/dashboard', {
       templateUrl: 'views/dashboard.html',
       controller: 'DashboardCtrl',
